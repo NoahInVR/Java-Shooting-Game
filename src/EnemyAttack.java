@@ -1,0 +1,19 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+
+public class EnemyAttack extends ArrayList<EnemyAttack> {
+    Image image = new ImageIcon("src/Images/enemy_attack.jpg").getImage();
+    int x, y;
+    int width = image.getWidth(null);
+    int height = image.getHeight(null);
+    int attack = 5;
+
+    public EnemyAttack(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public void fire() {
+        this.x -= 12;
+    }
+}
